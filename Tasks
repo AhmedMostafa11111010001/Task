@@ -1,0 +1,69 @@
+#include <iostream>
+using namespace std;
+void paint(char a, int rows , int columns);
+double small(double a, double b, double c);
+bool multiple(int x, int y);
+int main() {
+//Task 1
+	/*char a;
+	int rows, columns;
+	cout << "enter the shape\n";
+	cin >> a;
+	cout << "Enter rows\n";
+	cin >> rows;
+	cout << "Enter columns\n";
+	cin >> columns;
+	paint(a, rows, columns);*/
+// =====================================================================================
+//Task 2 
+	/*double a, b, c;
+	cout << "Enter 3 number\n";
+	cin >> a >> b >> c;
+	cout << "The smallest number is : " << small(a, b, c);*/
+//=======================================================================================
+//Taske 3
+	/*int x, y;
+	bool m;
+	cout << "enter 2 number (enter 0 , 0 to exit)\n";
+	do {
+		cout << "enter the first number: ";
+		cin >> x;
+		cout << "enter the second number: ";
+		cin >> y;
+		if (x == 0 && y == 0) {
+			cout << "exiting the program\n";
+			break;
+		}
+		m = multiple(x, y);
+		if (m == true) {
+			cout << y << " is multiple of " << x << "\n";
+		}
+		else {
+			cout << y << " isn't multiple of " << x << "\n";
+		}
+	} while (true);*/
+	return 0;
+}
+void paint(char a, int rows , int columns) {
+	for (int i = 0; i < rows; i++) {
+		for (int j = 0; j < columns; j++) {
+			cout << a;
+		}
+		cout << endl;
+	}
+}
+double small(double a, double b, double c) {
+	double small = a;
+	small = (b < small) ? b : small;
+	small = (c < small) ? c : small;
+	return small;
+}
+bool multiple(int x, int y) {
+	if (y % x == 0) 
+		return true;
+	return false;
+	
+}
+
+
+
